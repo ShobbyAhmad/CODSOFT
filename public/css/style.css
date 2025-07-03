@@ -1,0 +1,499 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(90deg, #3f51b5, #5c6bc0);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  color: white;
+}
+
+.logo {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #ffeb3b;
+  text-decoration: underline;
+}
+
+.container {
+  padding: 40px 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.main-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.blog-list {
+  flex: 3;
+}
+
+.blog-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 25px;
+}
+
+.blog-content h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.sidebar {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  height: fit-content;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.sidebar input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  color: #666;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
+
+footer a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.form-container {
+  background: white;
+  padding: 30px;
+  max-width: 500px;
+  margin: 60px auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+form button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+.post-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.post-header h1 {
+  margin-bottom: 5px;
+}
+
+.post-header small {
+  color: #777;
+}
+
+.post-image {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.post-body {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.comments-section {
+  margin-top: 40px;
+}
+
+.comment-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.comment-list li {
+  background: #f1f1f1;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.comment-form button {
+  padding: 10px 18px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background: #0056b3;
+}
+
+/* 🌙 DARK MODE SUPPORT */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #eee;
+  }
+  header,
+  .sidebar,
+  .blog-card,
+  .post-container,
+  .form-container {
+    background: #1e1e1e;
+    color: #fff;
+    border: 1px solid #333;
+  }
+  nav a {
+    color: #90caf9;
+  }
+  nav a:hover {
+    color: #42a5f5;
+  }
+  footer {
+    background: #1e1e1e;
+    color: #aaa;
+    border-top: 1px solid #333;
+  }
+  .comment-list li {
+    background: #2c2c2c;
+  }
+  form input,
+  form textarea {
+    background: #2b2b2b;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  form button,
+  .comment-form button {
+    background: #2196f3;
+  }
+  form button:hover,
+  .comment-form button:hover {
+    background: #0b7dda;
+  }
+}
+/* ✅ Responsive improvements for mobile UI */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    margin: 5px 10px 0 0;
+    font-size: 15px;
+  }
+
+  .sidebar {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .sidebar h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar input {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar ul li a {
+    font-size: 13px;
+  }
+
+  .blog-content h3 {
+    font-size: 18px;
+  }
+
+  .blog-content p {
+    font-size: 14px;
+  }
+
+  .post-container {
+    padding: 20px;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+}
+.blog-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* 🔥 Logo Animation */
+.animate-logo span {
+  display: inline-block;
+  animation: popIn 1.2s ease-in-out;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* ✨ Animated Button Glow */
+button, form button {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+button:hover, form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+/* 🎯 Hero Section */
+.hero {
+  background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+  color: white;
+  text-align: center;
+  padding: 60px 30px 40px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+/* ✨ Animated Button Glow */
+button, form button {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+button:hover, form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .blog-list {
+    width: 100%;
+  }
+
+  nav a {
+    margin-left: 10px;
+    font-size: 15px;
+  }
+
+  .blog-content h3 {
+    font-size: 18px;
+  }
+
+  .sidebar h3 {
+    font-size: 16px;
+  }
+
+  .sidebar ul li a {
+    font-size: 13px;
+  }
+}
+/* 🔄 Manual dark mode override (JS toggle) */
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark-mode header,
+body.dark-mode .sidebar,
+body.dark-mode .blog-card,
+body.dark-mode .post-container,
+body.dark-mode .form-container {
+  background: #1e1e1e;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+body.dark-mode nav a {
+  color: #90caf9;
+}
+
+body.dark-mode nav a:hover {
+  color: #42a5f5;
+}
+
+body.dark-mode footer {
+  background: #1e1e1e;
+  color: #aaa;
+  border-top: 1px solid #333;
+}
+
+body.dark-mode .comment-list li {
+  background: #2c2c2c;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+  background: #2b2b2b;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode form button,
+body.dark-mode .comment-form button {
+  background: #2196f3;
+}
+
+body.dark-mode form button:hover,
+body.dark-mode .comment-form button:hover {
+  background: #0b7dda;
+}

@@ -1,0 +1,14 @@
+<div class="form-container">
+  <h2>Create New Blog Post</h2>
+  <form action="/posts" method="POST">
+    <input type="text" name="title" placeholder="Post Title" required />
+
+    <!-- Image URL is now optional (not required) -->
+    <input type="text" name="imageUrl" placeholder="Image URL (from internet)" />
+
+    <textarea name="body" rows="8" placeholder="Write your blog here..." required></textarea>
+    <button type="submit">Publish</button>
+  </form>
+
+  <p><a href="/posts">← Back to All Posts</a></p>
+</div>

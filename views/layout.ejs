@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><%= title || "Shobbify Blog" %></title>
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo animate-logo">📝 <span>Shobbify</span></h1>
+
+    <nav>
+      <a href="/posts">Home</a>
+      <a href="/posts/new">New Post</a>
+      <% if (user) { %>
+        <a href="/logout">Logout</a>
+      <% } else { %>
+        <a href="/login">Login</a>
+      <% } %>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <%- body %>
+  </main>
+
+  <footer>
+    <p>© 2025 Shobbify Blog Project by Shoaib</p>
+    <p>📧 <a href="mailto:sshobby12@gmail.com">sshobby12@gmail.com</a></p>
+  </footer>
+</body>
+</html>

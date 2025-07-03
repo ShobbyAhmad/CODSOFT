@@ -1,0 +1,51 @@
+<section class="hero">
+  <div class="hero-text">
+    <h1>Welcome to Shobbify 📝</h1>
+    <p>Explore stories, thoughts, and creativity from amazing minds.</p>
+  </div>
+</section>
+
+
+<div class="main-content">
+  <section class="blog-list">
+    <% if (posts.length === 0) { %>
+      <p>No blog posts yet.</p>
+    <% } else { %>
+      <% posts.forEach(post => { %>
+        <div class="blog-card">
+          <img src="<%= post.imageUrl || 'https://source.unsplash.com/random/400x200?sig=' + post._id %>" alt="Post image">
+          <div class="blog-content">
+            <h3><a href="/posts/<%= post._id %>"><%= post.title %></a></h3>
+            <p><%= post.body.slice(0, 120) %>...</p>
+            <small>By <%= post.author.username %> on <%= post.createdAt.toDateString() %></small>
+          </div>
+        </div>
+      <% }) %>
+    <% } %>
+  </section>
+
+  <aside class="sidebar">
+    <h3>🔍 Search</h3>
+    <form method="GET" action="/posts">
+      <input type="text" name="search" placeholder="Enter your keyword" />
+    </form>
+
+    <h3>📂 Categories</h3>
+    <ul>
+      <li><a href="/posts?search=tech">Tech</a></li>
+      <li><a href="/posts?search=life">Life</a></li>
+      <li><a href="/posts?search=travel">Travel</a></li>
+      <li><a href="/posts?search=lifestyle">Lifestyle</a></li>
+      <li><a href="/posts?search=education">Education</a></li>
+      <li><a href="/posts?search=career">Career</a></li>
+      <li><a href="/posts?search=motivation">Motivation</a></li>
+    </ul>
+
+    <h3>🕘 Recent Posts</h3>
+    <ul>
+      <% posts.slice(0, 5).forEach(p => { %>
+        <li><a href="/posts/<%= p._id %>"><%= p.title %></a></li>
+      <% }) %>
+    </ul>
+  </aside>
+</div>
